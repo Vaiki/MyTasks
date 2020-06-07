@@ -13,27 +13,52 @@
         android:background="#1A1F3F"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/titlepage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/atma_medium"
-            android:text="My Tasks"
-            android:textAlignment="center"
-            android:textColor="#FFF"
-            android:textSize="36sp" />
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/subtitlepage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/coming_soon"
-            android:text="Finish Them Quickly Today"
-            android:textAlignment="center"
-            android:textColor="#4A4E6A"
-            android:textSize="18sp" />
+        <LinearLayout
+            android:layout_marginLeft="16dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title_page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/coming_soon"
+                android:text="My Tasks"
+                android:textColor="#FFF"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/subtitle_page"
+                android:textSize="18sp"
+                android:textColor="#4A4E6A"
+                android:layout_marginTop="8dp"
+                android:text="Finish Them Quickly Today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+           <Button
+               android:layout_marginTop="35dp"
+               android:layout_marginLeft="60dp"
+               android:id="@+id/btnAdd_task"
+               android:textSize="38sp"
+               android:textColor="#FFF"
+               android:textAlignment="center"
+               android:text="+"
+               android:background="@drawable/bgbtn_new"
+               android:layout_width="52dp"
+               android:layout_height="52dp"/>
+
+
+    </LinearLayout>
 
         <View
             android:layout_width="match_parent"

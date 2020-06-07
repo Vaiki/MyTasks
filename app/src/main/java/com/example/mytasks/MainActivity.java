@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     TextView titlePage, subtitlePage, endPage;
+    Button btnAdd_new;
      DatabaseReference reference;
      RecyclerView ourTasks;
      ArrayList<MyTasks> list;
@@ -38,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         titlePage = findViewById(R.id.titlepage);
         subtitlePage = findViewById(R.id.subtitlepage);
         endPage = findViewById(R.id.endpage);
+
+        btnAdd_new = findViewById(R.id.btnAdd_task);
 
         ourTasks = findViewById(R.id.our_tasks);
         ourTasks.setLayoutManager(new LinearLayoutManager(this));
