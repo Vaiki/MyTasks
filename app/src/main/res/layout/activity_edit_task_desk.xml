@@ -13,16 +13,16 @@
         android:background="#1A1F3F"
         android:orientation="vertical">
 
-             <TextView
-                    android:id="@+id/title_page"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/coming_soon"
-                    android:text="Create new task"
-                    android:textAlignment="center"
-                    android:textColor="#FFF"
-                    android:textSize="26sp" />
+        <TextView
+            android:id="@+id/title_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/coming_soon"
+            android:text="Edit Task Details"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="26sp" />
 
         <View
             android:layout_width="match_parent"
@@ -30,46 +30,46 @@
             android:layout_marginTop="20dp"
             android:background="#131E69" />
     </LinearLayout>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="16dp"
-    android:layout_marginTop="-40dp"
-    android:layout_marginRight="16dp"
-    android:orientation="vertical"
-    android:background= "@drawable/bg_item_task"
-    android:paddingBottom="22dp"
-    android:paddingTop="22dp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="-40dp"
         android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp">
-        <TextView
+        android:orientation="vertical"
+        android:background= "@drawable/bg_item_task"
+        android:paddingBottom="22dp"
+        android:paddingTop="22dp">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/add_title"
-            android:textSize="20sp"
-            android:textColor="@color/colorPrimaryDark"
-            android:text="Add Title"
-            android:layout_marginBottom="10dp"
-            />
-        <EditText
-            android:id="@+id/titledoes"
-            android:inputType="text"
-            android:background="@drawable/bg_input_task"
-            android:textColorHint="#B5B5B5"
-            android:textColor="@color/colorPrimaryDark"
+            android:orientation="vertical"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/add_title"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Add Title"
+                android:layout_marginBottom="10dp"
+                />
+            <EditText
+                android:id="@+id/titledoes"
+                android:inputType="text"
+                android:background="@drawable/bg_input_task"
+                android:textColorHint="#B5B5B5"
+                android:textColor="@color/colorPrimaryDark"
 
-            android:paddingLeft="12dp"
-            android:hint="What you do?"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"/>
+                android:paddingLeft="12dp"
+                android:hint="What you do?"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"/>
+        </LinearLayout>
+
+
     </LinearLayout>
-
-
-</LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -148,11 +148,11 @@
         </LinearLayout>
     </LinearLayout>
     <Button
-        android:id="@+id/btn_Save_Task"
+        android:id="@+id/btn_Save_Update"
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="20dp"
-        android:text="Create Now"
+        android:text="Save Update"
         android:textColor="#FFF"
         android:textAllCaps="false"
         android:background="@drawable/bg_btn_create"
@@ -161,11 +161,11 @@
         android:layout_height="55dp"
         />
     <Button
-        android:id="@+id/btn_Cansel"
+        android:id="@+id/btn_Delete"
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="14dp"
-        android:text="Cansel"
+        android:text="Delete"
         android:textColor="#AFAFAF"
         android:textAllCaps="false"
         android:background="@drawable/bg_btn_cancel"

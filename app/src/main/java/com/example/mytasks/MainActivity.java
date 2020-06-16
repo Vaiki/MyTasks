@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,7 +22,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     TextView titlePage, subtitlePage, endPage;
-    Button btnAdd_new;
+    Button btnAddNew;
      DatabaseReference reference;
      RecyclerView ourTasks;
      ArrayList<MyTasks> list;
@@ -37,16 +39,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_main);
 
-        titlePage = findViewById(R.id.titlepage);
-        subtitlePage = findViewById(R.id.subtitlepage);
+        titlePage = findViewById(R.id.title_page);
+        subtitlePage = findViewById(R.id.subtitle_page);
         endPage = findViewById(R.id.endpage);
 
-        btnAdd_new = findViewById(R.id.btnAdd_task);
+        btnAddNew = findViewById(R.id.btnAdd_task);
+        btnAddNew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(MainActivity.this,NewTaskAct.class);
+                startActivity(a);
+            }
+        });
 
+//работа с БД
         ourTasks = findViewById(R.id.our_tasks);
         ourTasks.setLayoutManager(new LinearLayoutManager(this));
         list = new ArrayList<MyTasks>();
-
+//получить данные из firebase
         reference = FirebaseDatabase.getInstance().getReference().child("MyTasks");
         reference.addValueEventListener(new ValueEventListener() {
             @Override

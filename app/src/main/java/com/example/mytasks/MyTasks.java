@@ -2,15 +2,24 @@ package com.example.mytasks;
 
 public class MyTasks {
 
-    String titledoes, datadoes, descdoes;
+    String titledoes, datedoes, descdoes, keydoes;
 
     public MyTasks() {
     }
 
-    public MyTasks(String titledoes, String datadoes, String descdoes) {
+    public MyTasks(String titledoes, String datedoes, String descdoes, String keydoes) {
         this.titledoes = titledoes;
-        this.datadoes = datadoes;
+        this.datedoes = datedoes;
         this.descdoes = descdoes;
+        this.keydoes = keydoes;
+    }
+
+    public String getKeydoes() {
+        return keydoes;
+    }
+
+    public void setKeydoes(String keydoes) {
+        this.keydoes = keydoes;
     }
 
     public String getTitledoes() {
@@ -21,12 +30,12 @@ public class MyTasks {
         this.titledoes = titledoes;
     }
 
-    public String getDatadoes() {
-        return datadoes;
+    public String getDatedoes() {
+        return datedoes;
     }
 
-    public void setDatadoes(String datadoes) {
-        this.datadoes = datadoes;
+    public void setDatadoes(String datedoes) {
+        this.datedoes = datedoes;
     }
 
     public String getDescdoes() {
